@@ -3,7 +3,7 @@
 
 using namespace std;
 
-std::ostream& operator<<(std::ostream& os, vector<int> ob)
+std::ostream& operator<<(std::ostream& os, vector<char> ob)
 {
     for (int i = 0; i < ob.size(); i++) {
         os << " " << ob.at(i);
@@ -24,11 +24,11 @@ int main()
     int lLimit = vMid;
     int rLimit = vMid;
 
-    vector<int> line;
+    vector<char> line;
     for (int i = 0; i < vSize; i++) {
-        line.push_back(0);
+        line.push_back(' ');
     }
-    line.at(line.size() / 2) = 1;
+    line.at(line.size() / 2) = '*';
 
     //algoritmul in sine
     cout << line << endl;
@@ -37,14 +37,14 @@ int main()
         if (rows < vMid) {
             lLimit--;
             rLimit++;
-            line.at(lLimit) = 1;
-            line.at(rLimit) = 1;
+            line.at(lLimit) = '*';
+            line.at(rLimit) = '*';
             cout << line << endl;
         }
 
         if (rows > vMid) {
-            line.at(lLimit) = 0;
-            line.at(rLimit) = 0;
+            line.at(lLimit) = ' ';
+            line.at(rLimit) = ' ';
             cout << line << endl;
             lLimit++;
             rLimit--;
