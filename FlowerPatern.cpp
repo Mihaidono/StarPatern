@@ -14,7 +14,7 @@ std::ostream& operator<<(std::ostream& os, vector<char> ob)
 int main()
 {
     int n=1,limit;
-    cout << "Al catelea il caut sefule?\nnumarul-> "; cin >> limit;
+    cout << "See the N variation of the flower pattern\nVariation number: -> "; cin >> limit;
     while (n <= limit) {
     puts("");
     int rows = 0;
